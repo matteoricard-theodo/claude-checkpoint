@@ -1,0 +1,17 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "grasp",
+  "description": "Quiz developers on what Claude just implemented. Auto-graded via Haiku, zero main-thread token overhead.",
+  "owner": {
+    "name": "Matteo Ricard",
+    "url": "https://github.com/matteoricard-theodo"
+  },
+  "plugins": [
+    {
+      "name": "grasp",
+      "description": "Ensures developers understand every implementation step. Modes: quiz (multiple choice + free text), quiz forced (free text only), inline (pause before each step).",
+      "source": "./",
+      "category": "productivity"
+    }
+  ]
+}

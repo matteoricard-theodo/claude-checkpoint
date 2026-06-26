@@ -1,0 +1,22 @@
+{
+  "name": "grasp",
+  "description": "Verifies that developers understand each implementation step, without blocking delivery. Quiz or inline checkpoint modes with auto-grading via Haiku.",
+  "author": {
+    "name": "Matteo Ricard",
+    "url": "https://github.com/matteoricard-theodo"
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "AskUserQuestion",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/grade-hook.sh\"",
+            "timeout": 60
+          }
+        ]
+      }
+    ]
+  }
+}
