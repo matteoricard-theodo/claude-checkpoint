@@ -6,14 +6,14 @@
     "url": "https://github.com/matteoricard-theodo"
   },
   "hooks": {
-    "PostToolUse": [
+    "SessionStart": [
       {
-        "matcher": "AskUserQuestion",
         "hooks": [
           {
             "type": "command",
-            "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/grade-hook.sh\"",
-            "timeout": 60
+            "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/setup.sh\"",
+            "timeout": 10,
+            "statusMessage": "Checking grasp hook setup..."
           }
         ]
       }
